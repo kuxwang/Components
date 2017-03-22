@@ -1,0 +1,34 @@
+.h5_radar {
+	
+}
+
+.h5_radar canvas {
+	position: absolute;
+	top: 0;
+	left: 0;  /*用canvans绘制动画会涉及到分层 用到z-index */
+	width: 100%;
+	height: 100%;
+	
+}
+.h5_radar .text {
+	position: absolute;
+	font-size: 36px;
+	transition: all 1s;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

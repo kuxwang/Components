@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/lib/jquery-3.1.1.js" ></script>
+		<script type="text/javascript" src="js/Base.js" ></script>
+		<script type="text/javascript" src="js/Bar.js" ></script>
+		<link rel="stylesheet" href="css/Bar.css" />
+		
+	</head>
+	<body>
+		
+		<script>
+			var cfg={
+				type : 'bar',
+				data : [
+					['A', .4 , '#ff7676'],
+					['B', .2 ],
+					['C', .1 ],
+					['D', .2 ],
+					['E', .35 ],
+					['F', .05 ],
+					['G', .09 ],
+				],
+				css : {
+					top:100,
+					opacity:0
+				},		
+				width :330,
+				height : 400,
+				center : true,
+				animateIn :{top:100,opacity:1},
+				animateOut :{top:50,opacity:0},	
+				center : true
+				
+			}
+			var H5=new Bar(name,cfg);
+			$(function(){
+				$('body').append(H5)
+			});
+			var leave=true;
+			$('body').click(function(){
+				leave=!leave;
+				$('.h5_component').trigger(leave? 'onLeave' : 'onLoad')
+			})
+		</script>
+	</body>
+</html>

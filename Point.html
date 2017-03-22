@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/lib/jquery-3.1.1.js" ></script>
+		<script type="text/javascript" src="js/Base.js" ></script>
+		<script type="text/javascript" src="js/Point.js" ></script>
+		<link rel="stylesheet" href="css/Point.css" />
+	</head>
+	<body>
+		
+		<script>
+			var cfg= {
+				type : 'point',
+				data : [
+					['A项目', .4 , 'green'],
+					['B项目', .2 , 'yellow', 0, '-60%'],
+					['C项目', .2 , 'red', 0, '120%']
+				],
+				css : {
+					bottom :'40%',
+					opacity : 1
+				},		
+				width :500,
+				height : 500,
+				center : true,
+				animateIn :{bottom:'40%',opacity:1},
+				animateOut :{bottom:0,opacity:0}
+			};
+			var H5=new Point(name,cfg);
+			$(function(){
+				$('body').append(H5)
+			});
+			var leave=true;
+			$('body').click(function(){
+				leave=!leave;
+				$('.h5_component').trigger(leave? 'onLeave' : 'onLoad')
+			})
+		</script>
+	</body>
+</html>
